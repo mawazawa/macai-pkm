@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		234665E389A945EA9820A058 /* PKMSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFCC6CA3FC4455287893992 /* PKMSource.swift */; };
+		2A3C6ACA6EC145F2AF3D65F5 /* MCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB6EB77F2EC49998C29ADE7 /* MCPClient.swift */; };
+		42FEBBC96FCA465B96D225F2 /* MCPServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D66C421C374EFF921C2FCF /* MCPServerManager.swift */; };
+		927EBEC47C264543B6A09F34 /* PKMDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FF610D26E8470F8255E509 /* PKMDashboardView.swift */; };
+		58E8C7E0C10B417D873F37FC /* PKMSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A2482924BB41B6A7CA268A /* PKMSettingsView.swift */; };
 		0BA0FF405FC14D3FABF82621 /* APIServiceTemplateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA7767A135E47FFAB9E3289 /* APIServiceTemplateProvider.swift */; };
 		1001F81047D94F5484238553 /* APIServiceTemplateAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5774456B942348B88C536014 /* APIServiceTemplateAddView.swift */; };
 		16E55B88D2D449948BD6C60F /* APIServiceTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B9230773084F7E92FFB3AD /* APIServiceTemplate.swift */; };
@@ -130,6 +135,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CBFCC6CA3FC4455287893992 /* PKMSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKMSource.swift; sourceTree = "<group>"; };
+		5DB6EB77F2EC49998C29ADE7 /* MCPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPClient.swift; sourceTree = "<group>"; };
+		18D66C421C374EFF921C2FCF /* MCPServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPServerManager.swift; sourceTree = "<group>"; };
+		64FF610D26E8470F8255E509 /* PKMDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKMDashboardView.swift; sourceTree = "<group>"; };
+		24A2482924BB41B6A7CA268A /* PKMSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKMSettingsView.swift; sourceTree = "<group>"; };
 		14461D2B9E6A48DEB427E5F1 /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
 		16D75E6599084CC8A6C8587C /* APIServiceTemplateProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTemplateProviderTests.swift; sourceTree = "<group>"; };
 		25B74289407745C983DD1294 /* APIServiceTemplateAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTemplateAddViewModel.swift; sourceTree = "<group>"; };
@@ -442,6 +452,7 @@
 		4A399C9729BC8FEF00E98796 /* macai */ = {
 			isa = PBXGroup;
 			children = (
+				335D5E0B562044FF8E260364 /* PKM */,
 				4A4F204A2D62650800D1F57F /* FiraCode-VF.ttf */,
 				4A399C9C29BC8FF100E98796 /* Assets.xcassets */,
 				4A399CA029BC8FF100E98796 /* Preview Assets.xcassets */,
@@ -517,6 +528,42 @@
 				4AA6EF5A2C565FDF003B6D41 /* APIServiceFactory.swift */,
 			);
 			path = APIHandlers;
+			sourceTree = "<group>";
+		};
+		335D5E0B562044FF8E260364 /* PKM */ = {
+			isa = PBXGroup;
+			children = (
+				75DA164DDC714C879F8A822D /* Dashboard */,
+				99030205B3EA40E0A37BD400 /* MCP */,
+				C32F1E6E6F8541A6B71A6959 /* Models */,
+			);
+			path = PKM;
+			sourceTree = "<group>";
+		};
+		75DA164DDC714C879F8A822D /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				64FF610D26E8470F8255E509 /* PKMDashboardView.swift */,
+				24A2482924BB41B6A7CA268A /* PKMSettingsView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		99030205B3EA40E0A37BD400 /* MCP */ = {
+			isa = PBXGroup;
+			children = (
+				5DB6EB77F2EC49998C29ADE7 /* MCPClient.swift */,
+				18D66C421C374EFF921C2FCF /* MCPServerManager.swift */,
+			);
+			path = MCP;
+			sourceTree = "<group>";
+		};
+		C32F1E6E6F8541A6B71A6959 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CBFCC6CA3FC4455287893992 /* PKMSource.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -670,6 +717,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234665E389A945EA9820A058 /* PKMSource.swift in Sources */,
+				2A3C6ACA6EC145F2AF3D65F5 /* MCPClient.swift in Sources */,
+				42FEBBC96FCA465B96D225F2 /* MCPServerManager.swift in Sources */,
+				927EBEC47C264543B6A09F34 /* PKMDashboardView.swift in Sources */,
+				58E8C7E0C10B417D873F37FC /* PKMSettingsView.swift in Sources */,
+
 				4A2D3CEB2D5794B10082A262 /* ThemeMode.swift in Sources */,
 				4A1F0A0A29CEFB7F002A139A /* MessageCell.swift in Sources */,
 				4ABB867B2CFC79ED004EC7B1 /* ErrorBubbleView.swift in Sources */,
