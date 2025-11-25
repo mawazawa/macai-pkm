@@ -41,6 +41,8 @@ struct ContentView: View {
     @State private var columnVisibility = NavigationSplitViewVisibility.all
     @State private var searchText = ""
     @State private var isSearchPresented = false
+    @State private var isPKMPanelVisible = false
+    @StateObject private var mcpServerManager = MCPServerManager()
 
     var body: some View {
         NavigationSplitView {
@@ -69,6 +71,10 @@ struct ContentView: View {
 
                 if previewStateManager.isPreviewVisible {
                     PreviewPane(stateManager: previewStateManager)
+                }
+
+                if isPKMPanelVisible {
+                    PKMPanelView(serverManager: mcpServerManager)
                 }
             }
             .searchable(text: $searchText, isPresented: $isSearchPresented, placement: .toolbar, prompt: "Search in chat…")
@@ -188,6 +194,13 @@ struct ContentView: View {
                 }) {
                     Image(systemName: "square.and.pencil")
                 }
+
+                Button(action: {
+                    isPKMPanelVisible.toggle()
+                }) {
+                    Image(systemName: isPKMPanelVisible ? "brain.fill" : "brain")
+                }
+                .help("Toggle PKM Knowledge Panel")
 
                 if #available(macOS 14.0, *) {
                     SettingsLink {
@@ -329,6 +342,17 @@ struct ContentView: View {
         )
     }
 
+}
+
+// MARK: - PKM Panel Wrapper
+struct PKMPanelView: View {
+    @ObservedObject var serverManager: MCPServerManager
+
+    var body: some View {
+        PKMDashboardView()
+            .environmentObject(serverManager)
+            .frame(minWidth: 300, idealWidth: 350, maxWidth: 500)
+    }
 }
 
 struct PreviewPane: View {
